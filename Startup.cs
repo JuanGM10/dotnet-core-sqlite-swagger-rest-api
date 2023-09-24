@@ -14,6 +14,7 @@ using Swashbuckle.AspNetCore;
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
 using Backend.Models;
+using Backend.Repository;
 namespace Backend
 {
     public class Startup
@@ -27,11 +28,12 @@ namespace Backend
 
         public void ConfigureServices(IServiceCollection services)
         {
+          
             services.AddControllers();
             services.AddSwaggerGen(opt => opt.SwaggerDoc("v1",new OpenApiInfo{Version="v1",Title="Api"}));
             services.AddDbContext<UserContext>(options =>
                 options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
-
+            services.AddScoped<ICalculatorRepository, CalculatorRepository>();
 
         }
 

@@ -8,4 +8,12 @@ namespace Backend.Models
         public String Password { get; set;}
     }
 
+    public class Calculator
+    {
+        public int Id { get; set; }
+        public int Number1 { get; set; }
+        public int Number2 { get; set; }
+        public string Operation { get; set; }
+        public int Result { get; set; }
+    }
 }
