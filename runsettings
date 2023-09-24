@@ -1,11 +1,6 @@
 <RunSettings>
   <RunConfiguration>
   </RunConfiguration>
-  <LoggerRunSettings>
-    <Loggers>
-      <Logger friendlyName="blame" enabled="True" />
-    </Loggers>
-  </LoggerRunSettings>
   <DataCollectionRunSettings>
     <DataCollectors>
       <!-- Enables blame -->
